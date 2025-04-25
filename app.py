@@ -7,7 +7,7 @@ from openpyxl.utils.dataframe import dataframe_to_rows
 st.set_page_config(page_title="Automated CR Filling", layout="wide")
 
 # Tambahkan logo/banner
-st.image("Logo App.png", use_column_width=True)
+# st.image("Logo App.png", use_column_width=True)
 
 st.title("📋 Automated CR Filling App")
 st.caption("Versi UI interaktif dengan preview, validasi, dan unduhan hasil otomatis")
