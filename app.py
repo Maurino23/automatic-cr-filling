@@ -65,8 +65,8 @@ st.divider()
 st.header("⚙️ Proses Data")
 if st.button("🚀 Proses Sekarang") and template_df is not None and input_data_df is not None:
     with st.spinner("Sedang memproses data..."):
-        if "Crew Name" not in template_df.columns or "Crew Name" not in input_data_df.columns:
-            st.error("❌ Kedua file harus memiliki kolom 'Crew Name'")
+        if "Crew ID" not in template_df.columns or "Crew ID" not in input_data_df.columns: # ganti jadi pakai "Crew ID"
+            st.error("❌ Kedua file harus memiliki kolom 'Crew ID'") # ganti jadi pakai "Crew ID"
         else:
             date_col = None
             for col in template_df.columns:
@@ -80,8 +80,8 @@ if st.button("🚀 Proses Sekarang") and template_df is not None and input_data_
                 template_df[date_col] = template_df[date_col].astype(object)
 
                 for index, row in template_df.iterrows():
-                    crew_name = str(row["Crew Name"]).strip()
-                    match = input_data_df[input_data_df["Crew Name"].astype(str).str.strip() == crew_name]
+                    crew_id = str(row["Crew ID"]).strip() # ganti jadi pakai "Crew ID"
+                    match = input_data_df[input_data_df["Crew ID"].astype(str).str.strip() == crew_id] # ganti jadi pakai "Crew ID"
 
                     if not match.empty:
                         val = match[date_col].iloc[0]
