@@ -88,9 +88,9 @@ if st.button("🚀 Proses Sekarang") and template_df is not None and input_data_
                         if pd.notna(val):
                             template_df.at[index, date_col] = val
                         else:
-                            template_df.at[index, date_col] = "Na"
+                            template_df.at[index, date_col] = "-"
                     else:
-                        template_df.at[index, date_col] = "Na"
+                        template_df.at[index, date_col] = "-"
 
                 # Buat workbook
                 wb = Workbook()
