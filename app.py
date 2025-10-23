@@ -15,7 +15,7 @@ if 'additional_files' not in st.session_state:
 
 # Sidebar untuk informasi dan pengaturan
 with st.sidebar:
-    st.image("E:\RINO\DATA ANALYST\CR Automatic Filling\Logo App.png", use_container_width=True)
+    st.image("Logo App.png", use_container_width=True)
     st.title("ℹ️ Informasi Aplikasi")
     st.info("""
     **Automated CR Filling App v2.5**
